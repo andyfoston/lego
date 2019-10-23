@@ -51,6 +51,7 @@ func allDNSCodes() string {
 		"linode",
 		"linodev4",
 		"liquidweb",
+		"memset",
 		"mydnsjp",
 		"namecheap",
 		"namedotcom",
@@ -863,6 +864,26 @@ func displayDNSHelp(name string) error {
 
 		ew.writeln()
 		ew.writeln(`More information: https://go-acme.github.io/lego/dns/liquidweb`)
+
+	case "memset":
+		// generated from: providers/dns/memset/memset.toml
+		ew.writeln(`Configuration for Memset.`)
+		ew.writeln(`Code:	'memset'`)
+		ew.writeln(`Since:	'v3.2.0'`)
+		ew.writeln()
+
+		ew.writeln(`Credentials:`)
+		ew.writeln(`	- "MEMSET_AUTH_TOKEN":	API Key`)
+		ew.writeln()
+
+		ew.writeln(`Additional Configuration:`)
+		ew.writeln(`	- "MEMSET_HTTP_TIMEOUT":	API request timeout`)
+		ew.writeln(`	- "MEMSET_POLLING_INTERVAL":	Time between DNS propagation check`)
+		ew.writeln(`	- "MEMSET_PROPAGATION_TIMEOUT":	Maximum waiting time for DNS propagation`)
+		ew.writeln(`	- "MEMSET_TTL":	The TTL of the TXT record used for the DNS challenge`)
+
+		ew.writeln()
+		ew.writeln(`More information: https://go-acme.github.io/lego/dns/memset`)
 
 	case "mydnsjp":
 		// generated from: providers/dns/mydnsjp/mydnsjp.toml

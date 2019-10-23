@@ -1,0 +1,19 @@
+Name = "Memset"
+Description = ''''''
+URL = "https://www.memset.com/docs/managing-your-server/dns/"
+Code = "memset"
+Since = "v3.2.0"
+
+Example = ''''''
+
+[Configuration]
+  [Configuration.Credentials]
+    MEMSET_AUTH_TOKEN = "API Key"
+  [Configuration.Additional]
+    MEMSET_POLLING_INTERVAL = "Time between DNS propagation check"
+    MEMSET_PROPAGATION_TIMEOUT = "Maximum waiting time for DNS propagation"
+    MEMSET_TTL = "The TTL of the TXT record used for the DNS challenge"
+    MEMSET_HTTP_TIMEOUT = "API request timeout"
+
+[Links]
+  API = "https://www.memset.com/apidocs/methods_dns.html"
