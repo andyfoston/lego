@@ -141,7 +141,7 @@ func (d *DNSProvider) newRequest(reqURL string, data []byte, v interface{}) erro
 		apiError := errorResponse{}
 		apiErr := json.Unmarshal(content, &apiError)
 		if apiErr == nil {
-			return fmt.Errorf("Unexpected response from memset: %s - %s", apiError.ErrorType, apiError.Error)
+			return fmt.Errorf("unexpected response from memset: %s - %s", apiError.ErrorType, apiError.Error)
 		}
 	}
 	return err
